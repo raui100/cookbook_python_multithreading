@@ -1,0 +1,3 @@
+# Ignore the IDEA directory and files
+.idea/
+python_multithreading.iml

@@ -1,0 +1,4 @@
+maturin==0.13.3
+numba==0.56.2
+numpy==1.23.3
+pytest==7.1.3
