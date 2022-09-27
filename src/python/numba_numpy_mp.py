@@ -35,11 +35,11 @@ def calc(matrix: np.ndarray) -> np.ndarray:
     array = np.sum(matrix, 0)  # Sum alongside the 0 axis (eg: [[1, 1], [0, 0]] -> [1, 1]
     array = array ** 0.5  # Square root of each element
 
-    results: np.ndarray = np.zeros(len(array), dtype=np.float)
-    for result_ind in range(len(array)):
+    results: np.ndarray = np.zeros(len(array), dtype=np.float64)
+    for result_ind in nb.prange(len(array)):
         number = array[result_ind]
         total = 0
-        for ind in nb.prange(1, 1_000):  # Mocking a real task
+        for ind in range(1, 1_000):  # Mocking a real task
             total += number / ind
         results[result_ind] = total
 
